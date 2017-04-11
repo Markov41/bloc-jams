@@ -53,7 +53,7 @@ var setSong = function(songNumber){
  
      var $row = $(template);
      
-     var clickHandler = function() {
+var clickHandler = function() {
 	var songNumber = parseInt($(this).attr('data-song-number'));
 
 	if (currentlyPlayingSongNumber !== null) {
@@ -75,12 +75,12 @@ var setSong = function(songNumber){
         updatePlayerBarSong();
 	} else if (currentlyPlayingSongNumber === songNumber) {
 		if (currentSoundFile.isPaused()) {
-                $(this).html(playerBarPauseButton);
-                $('.album-song-button').html(pauseButtonTemplate);
+                $(this).html(pauseButtonTemplate);
+                $('.main-controls .play-pause').html(playerBarPauseButton);
                 currentSoundFile.play();
             } else {
-                $(this).html(playerBarPlayButton);
-                $('.album-song-button').html(playButtonTemplate);
+                $(this).html(playButtonTemplate);
+                $('.main-controls .play-pause').html(playerBarPlayButton);
                 currentSoundFile.pause();   
             }
 	}
