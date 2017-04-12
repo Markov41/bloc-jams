@@ -1,3 +1,4 @@
+
 var setSong = function(songNumber){
          if (currentSoundFile) {
          currentSoundFile.stop();
@@ -118,7 +119,6 @@ var setSong = function(songNumber){
      }
  };
 
- 
  var trackIndex = function(album, song) {
      return album.songs.indexOf(song);
  };
