@@ -17,10 +17,12 @@ var setSong = function(songNumber){
 		if (currentSoundFile.isPaused()) {
                 $(this).html(pauseButtonTemplate);
                 $('.main-controls .play-pause').html(playerBarPauseButton);
+                $('.album-song-button').html(pauseButtonTemplate);
                 currentSoundFile.play();
             } else {
                 $(this).html(playButtonTemplate);
                 $('.main-controls .play-pause').html(playerBarPlayButton);
+                $('.album-song-button').html(playButtonTemplate);
                 currentSoundFile.pause();   
             }
  }
